@@ -82,7 +82,7 @@ df_department <- df1 %>%
   separate(Period, into = c('month','year'), extra = 'drop', remove = FALSE) %>%
   ## add a column `value` which contains the 
   ## information from the `Value (in millions)` 
-  mutate(value=df_department$`Value (in millions)`) %>%
+  mutate(value=df1$`Value (in millions)`) %>%
   ## group the data frame by the `year` column
  group_by(year) %>%
   ## Summarize the data by creating a new column
